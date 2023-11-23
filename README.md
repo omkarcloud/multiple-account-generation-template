@@ -46,7 +46,7 @@ When creating a large number of bot accounts on a website, it is recommended to 
 
    3. Change your IP following the "Mobile Aeroplane Method" described in the "Changing IP" lesson.
 
-2. Ensure unique IPs for each bot. After automating actions with one bot, change the IP before using another bot. You can use the following config in Task to prompt you to change IP.
+<!-- 2. Ensure unique IPs for each bot. After automating actions with one bot, change the IP before using another bot. You can use the following config in Task to prompt you to change IP.
 ```python
 from bose import BaseTask, TaskConfig
 
@@ -60,7 +60,7 @@ And change the IP following the "Mobile Aeroplane Method" described in the "Chan
 
 ```python
 class Task(BaseTask):
-    browser_config = BrowserConfig(profile='1', is_tiny_profile=True)
+    browser_config = BrowserConfig(profile='1', tiny_profile=True)
 ```
 
 4. Make the bot look humane by adding random waits. You can use the `driver.short_random_sleep` and `driver.long_random_sleep` methods for it. 
@@ -68,4 +68,4 @@ class Task(BaseTask):
 5. Use a real-looking name, email, username, and password generated using the [Account Generator Module](https://www.omkar.cloud/bose/docs/niceties/account-generator/).
 
 To see these best practices in action, I highly recommend reviewing the code of the Outlook account creator bot provided [here](https://github.com/omkarcloud/outlook-account-generator/blob/master/src/outlook_sign_up_task.py).
-
+ -->

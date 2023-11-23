@@ -1,5 +1,6 @@
-from bose.launch_tasks import launch_tasks
-from src import tasks_to_be_run
+from src.action import perform_action
+from src.sign_up import create_accounts
 
 if __name__ == "__main__":
-    launch_tasks(*tasks_to_be_run)
+    create_accounts()
+    perform_action()

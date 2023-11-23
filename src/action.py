@@ -1,16 +1,17 @@
-from bose import *
-from .sign_up import Task as SignUpTask
+from botasaurus import *
 
-class Task(SignUpTask):
-    def get_data(self):
-        return Profile.get_profiles()
+@browser(
+    data = lambda: bt.Profile.get_profiles(random=True),
+    block_images=True,
+    profile= lambda account: account['username'],
+    tiny_profile= True,
+)
+def perform_action(driver: AntiDetectDriver, account):
+    def perform():
+        """
+            Code to perform desired action using Bot
+        """ 
+        pass
 
-    def run(self, driver, data):
-        def perform_action():
-            """
-                Code to perform desired action using Bot
-            """ 
-            pass
-
-        driver.organic_get("https://target-website.com/auth/sign-up/") 
-        perform_action()
+    driver.organic_get("https://target-website.com/auth/sign-up/") 
+    perform()
