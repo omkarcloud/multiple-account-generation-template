@@ -6,6 +6,7 @@ from botasaurus import *
     block_images=True,
     profile= lambda account: account['username'],
     tiny_profile= True,
+    output=None,
 )
 def create_accounts(driver: AntiDetectDriver, account):
     name = account['name']
